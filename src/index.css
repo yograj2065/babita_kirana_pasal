@@ -13,7 +13,8 @@
   /* Stone 50 - Warm Rice/Off-White Background */
   --color-box: #fffdd0;
   /* Cream - Box/Card Background */
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: 'Outfit', sans-serif;
+  --font-display: 'Marck Script', cursive;
 }
 
 @layer base {

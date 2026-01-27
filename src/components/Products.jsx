@@ -15,6 +15,11 @@ const Products = () => {
                 <div className="text-center mb-12">
                     <h2 className="text-sm font-bold text-secondary uppercase tracking-widest mb-2">Shop Essentials</h2>
                     <h3 className="text-3xl md:text-4xl font-bold text-primary">Daily Grocery Items</h3>
+                    <div className="mt-4 max-w-2xl mx-auto bg-primary/5 p-4 rounded-lg border border-primary/10">
+                        <p className="text-sm text-gray-600 italic">
+                            <b>Note to Our Customers:</b> Product prices are subject to market changes and may fluctuate due to inflation or deflation. We appreciate your understanding.
+                        </p>
+                    </div>
                 </div>
 
                 {/* Category Filters */}

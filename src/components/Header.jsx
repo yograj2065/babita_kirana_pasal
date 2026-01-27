@@ -37,8 +37,8 @@ const Header = () => {
                 {/* Logo */}
                 <div className="flex flex-col cursor-pointer">
                     <Link to="home" smooth={true}>
-                        <h1 className="text-2xl font-bold tracking-wider">Babita Kirana</h1>
-                        <span className="text-xs font-light text-accent">Baradashi-7, Jhapa</span>
+                        <h1 className="text-3xl font-bold tracking-wider font-display">Babita Kirana Pasal</h1>
+                        <span className="text-xs font-light text-accent ml-1">Baradashi-7, Jhapa</span>
                     </Link>
                 </div>
 

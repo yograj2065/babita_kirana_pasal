@@ -12,7 +12,7 @@ const Footer = () => {
 
                 {/* About Info */}
                 <div>
-                    <h3 className="text-xl font-bold mb-4">Babita Kirana Pasal</h3>
+                    <h3 className="text-2xl font-bold mb-4 font-display">Babita Kirana Pasal</h3>
                     <p className="text-gray-200 text-sm leading-relaxed mb-4">
                         Your trusted local grocery shop in Baradashi-7, Jhapa. Providing fresh groceries, daily essentials, and quality products for over 2 years.
                     </p>
