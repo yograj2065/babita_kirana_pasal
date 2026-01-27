@@ -21,19 +21,41 @@ const Gallery = () => {
                     <h3 className="text-3xl md:text-4xl font-bold text-primary">Inside Our Shop</h3>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                     {images.map((img, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            whileHover={{ scale: 1.05 }}
-                            transition={{ duration: 0.3 }}
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                            whileHover={{
+                                y: -5,
+                                transition: { duration: 0.2 }
+                            }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
                             onClick={() => setSelectedImage(img)}
-                            className="aspect-square overflow-hidden rounded-xl cursor-pointer shadow-md"
+                            className="group relative aspect-square overflow-hidden rounded-2xl cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/20 bg-white"
                         >
-                            <img src={img} alt={`Gallery ${index + 1}`} className="w-full h-full object-cover" />
+                            {/* Main Image */}
+                            <motion.img
+                                src={img}
+                                alt={`Gallery ${index + 1}`}
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-115"
+                            />
+
+                            {/* Hover Overlay */}
+                            <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                                <motion.div
+                                    initial={{ scale: 0.5, opacity: 0 }}
+                                    whileHover={{ scale: 1.1 }}
+                                    animate={{ scale: 1, opacity: 1 }}
+                                    className="bg-white/90 text-primary p-4 rounded-full shadow-xl"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                    </svg>
+                                </motion.div>
+                            </div>
                         </motion.div>
                     ))}
                 </div>
