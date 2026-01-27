@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0d9488;
+  /* Teal 600 - Deep Seafoam */
+  --color-secondary: #2dd4bf;
+  /* Teal 400 - Bright Seafoam Accent */
+  --color-accent: #facc15;
+  /* Yellow 400 - Sunny Highlight */
+  --color-dark: #134e4a;
+  /* Teal 900 - Dark Seafoam Text */
+  --color-light: #fafaf9;
+  /* Stone 50 - Warm Rice/Off-White Background */
+  --color-box: #fffdd0;
+  /* Cream - Box/Card Background */
+  --font-sans: 'Inter', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  }
+}
