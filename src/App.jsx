@@ -1,9 +1,10 @@
-import { Header, Hero, About, Products, WhyChooseUs, Gallery, Contact, Footer } from './components';
+import { Header, Hero, About, Products, WhyChooseUs, Gallery, Contact, Footer, Preloader } from './components';
 import { FaWhatsapp } from 'react-icons/fa';
 
 function App() {
   return (
     <div className="font-sans antialiased text-dark bg-gray-50 relative">
+      <Preloader />
       <Header />
 
       <main>

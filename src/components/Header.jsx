@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { Link } from 'react-scroll';
+import logo from '../assets/logo.png';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -30,15 +31,18 @@ const Header = () => {
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-primary shadow-lg py-2' : 'bg-transparent py-4'
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-primary shadow-lg py-1' : 'bg-transparent py-4'
                 }`}
         >
             <div className="container mx-auto px-4 flex justify-between items-center text-white">
                 {/* Logo */}
-                <div className="flex flex-col cursor-pointer">
-                    <Link to="home" smooth={true}>
-                        <h1 className="text-3xl font-bold tracking-wider font-display">Babita Kirana Pasal</h1>
-                        <span className="text-xs font-light text-accent ml-1">Baradashi-7, Jhapa</span>
+                <div className="flex items-center cursor-pointer group">
+                    <Link to="home" smooth={true} className="flex items-center gap-2">
+                        <img src={logo} alt="Babita Kirana Pasal" className={`transition-all duration-300 ${scrolled ? 'h-10 w-10' : 'h-14 w-14'} object-contain`} />
+                        <div className="flex flex-col">
+                            <h1 className={`font-bold tracking-wider font-display transition-all duration-300 ${scrolled ? 'text-xl' : 'text-2xl'}`}>Babita Kirana Pasal</h1>
+                            {!scrolled && <span className="text-[10px] font-light text-accent ml-1 opacity-80 uppercase tracking-widest">Baradashi-7, Jhapa</span>}
+                        </div>
                     </Link>
                 </div>
 

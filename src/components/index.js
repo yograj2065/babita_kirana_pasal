@@ -6,3 +6,4 @@ export { default as WhyChooseUs } from './WhyChooseUs';
 export { default as Gallery } from './Gallery';
 export { default as Contact } from './Contact';
 export { default as Footer } from './Footer';
+export { default as Preloader } from './Preloader';
