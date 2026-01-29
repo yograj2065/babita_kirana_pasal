@@ -117,6 +117,10 @@
 
 @layer utilities {
   .font-display {
-    font-family: 'Marck Script', cursive;
+    font-family: var(--font-display);
+  }
+
+  .font-cursive {
+    font-family: var(--font-cursive);
   }
 }
