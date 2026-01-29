@@ -8,12 +8,13 @@ const Contact = () => {
         const phone = e.target.phone.value;
         const message = e.target.message.value;
 
-        // Construct mailto link
-        const mailtoLink = `mailto:ganeshyograj8@gmail.com?subject=New Message from ${name}&body=From: ${name}%0APhone: ${phone}%0A%0AMessage:%0A${message}`;
+        // Construct WhatsApp link
+        const whatsappMessage = `Hello! 👋\n\nName: ${name}\nPhone: ${phone}\n\nMessage:\n${message}`;
+        const whatsappLink = `https://wa.me/9779807926965?text=${encodeURIComponent(whatsappMessage)}`;
 
-        window.location.href = mailtoLink;
+        window.open(whatsappLink, '_blank');
 
-        alert("Opening your email client to send the message...");
+        alert("Opening WhatsApp to send your message...");
     };
 
     return (
@@ -121,7 +122,7 @@ const Contact = () => {
                                 Send Message
                             </button>
                             <p className="text-xs text-center text-gray-500 mt-4">
-                                This will open your email client to send the message.
+                                This will open WhatsApp to send the message.
                             </p>
                         </form>
                     </motion.div>

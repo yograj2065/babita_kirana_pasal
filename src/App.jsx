@@ -3,7 +3,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 function App() {
   return (
-    <div className="font-sans antialiased text-dark bg-gray-50 relative">
+    <div className="font-sans antialiased text-dark bg-gray-50 relative overflow-hidden">
       <Preloader />
       <Header />
 
