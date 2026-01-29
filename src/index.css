@@ -13,8 +13,19 @@
   /* Stone 50 - Warm Rice/Off-White Background */
   --color-box: #fffdd0;
   /* Cream - Box/Card Background */
+
+  /* Legacy Colors from tailwind.config.js */
+  --color-primary-legacy: #166534;
+  --color-secondary-legacy: #ca8a04;
+  --color-accent-legacy: #fca5a5;
+
   --font-sans: 'Outfit', sans-serif;
   --font-display: 'Dancing Script', cursive;
+  --font-cursive: 'Marck Script', cursive;
+
+  /* Custom Variables */
+  --primary-green: #2d5a27;
+  --primary-gold: #c5a059;
 }
 
 @layer base {
@@ -90,11 +101,6 @@
 .animate-width-grow {
   animation: width-grow 0.8s ease-out 1s forwards;
   width: 0;
-}
-
-:root {
-  --primary-green: #2d5a27;
-  --primary-gold: #c5a059;
 }
 
 .text-primary-green {
